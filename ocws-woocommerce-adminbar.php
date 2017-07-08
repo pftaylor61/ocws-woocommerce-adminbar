@@ -5,9 +5,9 @@
 Plugin Name: OCWS WooCommerce Admin Bar
 Plugin URI: http://oldcastleweb.com/pws/plugins
 
-Description: This plugin will check to see if the WooCommerce plugin exists. If it does, it will look at the orders, and list all those on which action needs to be taken.
+Description: This plugin will check to see if the WooCommerce plugin exists. If it does, it will look at the orders, and publish the number of pending orders on the admin bar.
 
-Version: 0.1
+Version: 0.2
 Author: Paul Taylor
 Author URI: http://oldcastleweb.com/pws/about
 License: GPL2
@@ -49,7 +49,7 @@ GitHub Branch:     master
         }
         
         if ( is_plugin_active('woocommerce/woocommerce.php') ) {
-            add_action( 'admin_bar_menu', 'ocws_wcab_newmenu',100 );
+            add_action( 'admin_bar_menu', 'ocws_wcab_newmenu',20 );
         } // end of testing for WooCommerce
         
         function ocws_wcab_newmenu() {
@@ -66,11 +66,11 @@ GitHub Branch:     master
                     $plugin_url = plugins_url( plugin_basename( dirname( __FILE__ ) ) ) ;
                     $ocws_wcab_title = "<img src=\"".$plugin_url."/images/cart_16x16.png\"";
                     $ocws_wcab_title .= " style=\"vertical-align:middle;margin-right:5px\" width=\"16\" height=\"16\" alt=\"OCWS\" />";
-                    $ocws_wcab_title .= " Orders Pending ";
+                    $ocws_wcab_title .= " Orders to Process ";
 
                     $wp_admin_bar->add_menu(array(
                                     'id' => 'ocws_wcab_newmenu',
-                                    'title' => $ocws_wcab_title." ".ocws_wbac_count_orders('pending'),
+                                    'title' => $ocws_wcab_title." ".(ocws_wbac_count_orders('pending') + ocws_wbac_count_orders('processing')),
                                     'href' => site_url('/wp-admin/edit.php?post_type=shop_order'),
                                     ));
                 } // the plugin does nothing if the user is not an admin

@@ -4,7 +4,10 @@
 # OCWS WooCommerce Admin Bar Plugin
 ocws-woocommerce-adminbar
 
-This plugin will check to see if the WooCommerce plugin exists. If it does, it will look at the orders, and publish the number of pending orders on the admin bar.
+This plugin will check to see if the WooCommerce plugin exists. If it does, it will look at the orders, and publish the number of orders needing processing on the admin bar.
+
+## Version 0.2
+Now publishes how many orders need processing
 
 ## Version 0.1
 ![ocws-woocommerce-adminbar](./images/screenshot1.png)
