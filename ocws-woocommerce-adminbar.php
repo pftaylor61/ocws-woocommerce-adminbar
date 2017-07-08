@@ -7,7 +7,7 @@ Plugin URI: http://oldcastleweb.com/pws/plugins
 
 Description: This plugin will check to see if the WooCommerce plugin exists. If it does, it will look at the orders, and publish the number of pending orders on the admin bar.
 
-Version: 0.2
+Version: 0.2.1
 Author: Paul Taylor
 Author URI: http://oldcastleweb.com/pws/about
 License: GPL2
@@ -57,7 +57,7 @@ GitHub Branch:     master
                 global $wp_version;
                 global $post;
                 
-                if (is_admin()) { // to test to see if the user is an admin; otherwise do nothing
+                if ((is_admin())||(current_user_can('editor'))) { // to test to see if the user is an admin; otherwise do nothing
                 
                     $ocws_wcab_countposts = wp_count_posts('shop_order');
                     $ocws_wcab_orders = $ocws_wcab_countposts->wc-completed;
