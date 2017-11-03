@@ -1,19 +1,23 @@
 <?php
 
 /*
-
-Plugin Name: OCWS WooCommerce Admin Bar
-Plugin URI: http://oldcastleweb.com/pws/plugins
-
-Description: This plugin will check to see if the WooCommerce plugin exists. If it does, it will look at the orders, and publish the number of pending orders on the admin bar.
-
-Version: 0.2.1
-Author: Paul Taylor
-Author URI: http://oldcastleweb.com/pws/about
-License: GPL2
-GitHub Plugin URI: https://github.com/pftaylor61/ocws-woocommerce-adminbar
-GitHub Branch:     master
-
+*
+* Plugin Name: OCWS WooCommerce Admin Bar
+* Plugin URI: http://oldcastleweb.com/pws/plugins
+*
+* Description: This plugin will check to see if the WooCommerce plugin exists. If it does, it will look at the orders, and publish the number of pending orders on the admin bar.
+*
+* Version: 0.3
+* Author: Paul Taylor
+* Author URI: http://oldcastleweb.com/pws/about
+* License: GPL2
+*
+* WC requires at least: 2.3
+* WC tested up to: 3.2.3
+*
+* GitHub Plugin URI: https://github.com/pftaylor61/ocws-woocommerce-adminbar
+* GitHub Branch:     master
+*
 */
 
 /*  Copyright 2017  Paul Taylor  (email : info@oldcastleweb.com)
