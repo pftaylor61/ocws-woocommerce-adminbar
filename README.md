@@ -6,6 +6,15 @@ ocws-woocommerce-adminbar
 
 This plugin will check to see if the WooCommerce plugin exists. If it does, it will look at the orders, and publish the number of orders needing processing on the admin bar.
 
+## Version 0.6
+The plugin edited, so that it works with both WooCommerce and the new Classic Commerce plugins.
+
+## Version 0.5
+Tweaked, to re-position the admin menu.
+
+## Version 0.4
+Omitted due to large update
+
 ## Version 0.3
 Declaration of support for WooCommerce added. Currently tested up to WC 3.2.3
 
