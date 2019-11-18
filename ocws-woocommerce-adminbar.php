@@ -7,7 +7,7 @@
 *
 * Description: This plugin will check to see if the WooCommerce plugin or the Classic Commerce plugin exists. If it does, it will look at the orders, and publish the number of pending orders on the admin bar.
 *
-* Version: 0.6
+* Version: 0.6.1
 * Author: Paul Taylor
 * Author URI: http://oldcastleweb.com/pws/about
 * License: GPL2
