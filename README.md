@@ -8,6 +8,9 @@ This plugin will check to see if a Commerce plugin exists (either WooCommerce or
 
 the plugin was originally designed for WooCommerce, and then updated to work with the new open source Classic Commerce.
 
+## Version 0.6.2
+Corrected a minor typo.
+
 ## Version 0.6.1
 Slight name change.
 
