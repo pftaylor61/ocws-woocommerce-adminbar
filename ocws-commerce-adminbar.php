@@ -7,15 +7,16 @@
 *
 * Description: This plugin will check to see if the WooCommerce plugin or the Classic Commerce plugin exists. If it does, it will look at the orders, and publish the number of pending orders on the admin bar.
 *
-* Version: 0.6.2
+* Version: 1.0.0
 * Author: Paul Taylor
 * Author URI: http://oldcastleweb.com/pws/about
 * License: GPL2
 *
-* WC requires at least: 2.3
-* WC tested up to: 3.2.3
+* WC requires at least: 3.2
+* WC tested up to: 4.2.2
+* CC tested up to: 1.0.0-beta.1
 *
-* GitHub Plugin URI: https://github.com/pftaylor61/ocws-woocommerce-adminbar
+* GitHub Plugin URI: https://github.com/pftaylor61/ocws-commerce-adminbar
 * GitHub Branch:     master
 *
 */
@@ -58,15 +59,15 @@
         
         function ocws_wcab_newmenu() {
                 global $wp_admin_bar;
-                global $wp_version;
-                global $post;
+                // global $wp_version;
+                // global $post;
                 
                 if ((is_admin())||(current_user_can('editor'))) { // to test to see if the user is an admin; otherwise do nothing
                 
-                    $ocws_wcab_countposts = wp_count_posts('shop_order');
-                    $ocws_wcab_orders = $ocws_wcab_countposts->wc-completed;
+                    // $ocws_wcab_countposts = wp_count_posts('shop_order');
+                    // $ocws_wcab_orders = $ocws_wcab_countposts->wc-completed;
 
-                    $menupt_title = "";
+                    // $menupt_title = "";
                     $plugin_url = plugins_url( plugin_basename( dirname( __FILE__ ) ) ) ;
                     $ocws_wcab_title = "<img src=\"".$plugin_url."/images/cart_16x16.png\"";
                     $ocws_wcab_title .= " style=\"vertical-align:middle;margin-right:5px\" width=\"16\" height=\"16\" alt=\"OCWS\" />";
